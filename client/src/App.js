@@ -9,7 +9,6 @@ function App() {
 		<div className="App">
 			<Jumbotron />
 			<br />
-			{/* <ScoreBar /> */}
 			<div className="container">
 				<RenderSection />
 			</div>

@@ -48,10 +48,12 @@ class RenderSection extends Component {
 	};
 
 	cardOnClick = (event) => {
-		// get the id from the card clicked
+		// get the id from the clicked image
 		const id = event.target.id;
-		// create a new array with the old array of clicked cards, and add the new one
-		const clicked = [ this.state.clicked, id ];
+		// push that data to the clicked Array
+		// this
+
+		const clickedArray = [ this.state.clickedArray, id ];
 
 		if (this.state.clickedArray.indexOf(id) === -1) {
 			// update the score
@@ -62,7 +64,7 @@ class RenderSection extends Component {
 			this.setState({ clickedArray });
 		} else {
 			//reset the clicked array and return the score to 0
-			const clicked = [];
+			const clickedArray = [];
 			this.setState({ clickedArray });
 			this.setState({ score: 0 });
 		}
@@ -94,6 +96,7 @@ class RenderSection extends Component {
 	};
 
 	renderImages = () => {
+		// ren
 		return this.state.images.map((image) => {
 			return <ImageCard id={image.id} onClick={this.cardOnClick} src={image.image} alt={image.text} />;
 		});
@@ -101,7 +104,7 @@ class RenderSection extends Component {
 
 	render() {
 		return (
-			<div className="scoreBar row text-align-center">
+			<div className="scoreBar row text-center">
 				<ScoreBar score={this.state.score} highScore={this.state.highScore} />
 				<div className="cardContainer">{this.renderImages()}</div>
 			</div>
