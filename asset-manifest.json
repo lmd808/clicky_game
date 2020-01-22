@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/github.io/clicky_game/static/css/main.70e8c344.chunk.css",
+    "main.js": "/github.io/clicky_game/static/js/main.b3cf2ee8.chunk.js",
+    "main.js.map": "/github.io/clicky_game/static/js/main.b3cf2ee8.chunk.js.map",
+    "runtime-main.js": "/github.io/clicky_game/static/js/runtime-main.dc33c5f2.js",
+    "runtime-main.js.map": "/github.io/clicky_game/static/js/runtime-main.dc33c5f2.js.map",
+    "static/js/2.1e6cfe00.chunk.js": "/github.io/clicky_game/static/js/2.1e6cfe00.chunk.js",
+    "static/js/2.1e6cfe00.chunk.js.map": "/github.io/clicky_game/static/js/2.1e6cfe00.chunk.js.map",
+    "index.html": "/github.io/clicky_game/index.html",
+    "precache-manifest.5f8cdbeec9d8bd908456187955643a6d.js": "/github.io/clicky_game/precache-manifest.5f8cdbeec9d8bd908456187955643a6d.js",
+    "service-worker.js": "/github.io/clicky_game/service-worker.js",
+    "static/css/main.70e8c344.chunk.css.map": "/github.io/clicky_game/static/css/main.70e8c344.chunk.css.map",
+    "static/js/2.1e6cfe00.chunk.js.LICENSE": "/github.io/clicky_game/static/js/2.1e6cfe00.chunk.js.LICENSE",
+    "static/media/dog.jpg": "/github.io/clicky_game/static/media/dog.041a49a5.jpg",
+    "static/media/hedgehog.jpg": "/github.io/clicky_game/static/media/hedgehog.4e2840d9.jpg",
+    "static/media/peacock.jpg": "/github.io/clicky_game/static/media/peacock.e35c0a05.jpg",
+    "static/media/tiger.jpg": "/github.io/clicky_game/static/media/tiger.fc890474.jpg",
+    "static/media/whitetiger.jpg": "/github.io/clicky_game/static/media/whitetiger.a3c82f84.jpg",
+    "static/media/zebra.jpg": "/github.io/clicky_game/static/media/zebra.aeefafdb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dc33c5f2.js",
+    "static/js/2.1e6cfe00.chunk.js",
+    "static/css/main.70e8c344.chunk.css",
+    "static/js/main.b3cf2ee8.chunk.js"
+  ]
+}
