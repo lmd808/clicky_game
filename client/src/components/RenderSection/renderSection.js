@@ -32,16 +32,16 @@ class RenderSection extends Component {
 		highScore: 0,
 		//my array of images
 		images: [
-			{ image: card1, id: 1 },
-			{ image: card2, id: 2 },
-			{ image: card3, id: 3 },
-			{ image: card4, id: 4 },
-			{ image: card5, id: 5 },
-			{ image: card6, id: 6 },
-			{ image: card7, id: 7 },
-			{ image: card8, id: 8 },
-			{ image: card9, id: 9 },
-			{ image: card10, id: 10 }
+			{ image: card1, key: 1 },
+			{ image: card2, key: 2 },
+			{ image: card3, key: 3 },
+			{ image: card4, key: 4 },
+			{ image: card5, key: 5 },
+			{ image: card6, key: 6 },
+			{ image: card7, key: 7 },
+			{ image: card8, key: 8 },
+			{ image: card9, key: 9 },
+			{ image: card10, key: 10 }
 		],
 		// array for images clicked
 		clickedImages: []
