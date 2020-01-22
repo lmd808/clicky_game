@@ -51,8 +51,7 @@ class RenderSection extends Component {
 		// get the id from the clicked image
 		const id = event.target.id;
 		// push that data to the clicked Array
-		// this
-
+		// this is the actual functionality of the game
 		const clickedArray = [ this.state.clickedArray, id ];
 
 		if (this.state.clickedArray.indexOf(id) === -1) {
@@ -68,7 +67,6 @@ class RenderSection extends Component {
 			this.setState({ clickedArray });
 			this.setState({ score: 0 });
 		}
-
 		// return image shuffle
 		return this.shuffleImages(this.state.images);
 	};
@@ -82,6 +80,13 @@ class RenderSection extends Component {
 		}
 	}
 
+	renderImages = () => {
+		// ren
+		return this.state.images.map((image) => {
+			return <ImageCard id={image.id} onClick={this.cardOnClick} src={image.image} alt={image.text} />;
+		});
+	};
+
 	shuffleImages = (array) => {
 		// logic from my word guess game
 		for (let i = array.length - 1; i > 0; i--) {
@@ -93,13 +98,6 @@ class RenderSection extends Component {
 		}
 		// return the new images array
 		return this.setState({ images: array });
-	};
-
-	renderImages = () => {
-		// ren
-		return this.state.images.map((image) => {
-			return <ImageCard id={image.id} onClick={this.cardOnClick} src={image.image} alt={image.text} />;
-		});
 	};
 
 	render() {
