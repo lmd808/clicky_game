@@ -14,9 +14,6 @@ const ScoreBar = (props) => {
 				<div className="col-3 offset-1 text-center">
 					<h3>High Score: {props.highScore}</h3>
 				</div>
-				{/* <h3 className="text-center">
-					Score: {props.score}  Latest High Score: {props.highScore}
-				</h3> */}
 			</div>
 		</div>
 	);

@@ -15,14 +15,7 @@ import card8 from '../../Images/zebra.jpg';
 import card9 from '../../Images/koala.jpg';
 import card10 from '../../Images/whitetiger.jpg';
 
-//psudo code
-// push the cards to an array of objects
-// use map function to generate a card for each image
-// tak on a click event to the cards  (this will be a function)
-// if clicked...
-// I need to figure out how to create an id and add it to another away
-// use counter activity state for base
-
+// render array
 class RenderSection extends Component {
 	// initial state of game
 	state = {
@@ -44,67 +37,71 @@ class RenderSection extends Component {
 			{ image: card10, id: 10, text: 'Animal' }
 		],
 		// array for images clicked
+		// leave empty, push id's of clicked images later
 		clickedArray: []
 	};
-
+	// logic to push clicked images to clicked Array
 	cardOnClick = (event) => {
 		// get the id from the clicked image
 		const id = event.target.id;
 		// push that data to the clicked Array
-		// this is the actual functionality of the game
 		const clickedArray = [ this.state.clickedArray, id ];
 
+		// if the index of my ID is -1 (not in the array)
 		if (this.state.clickedArray.indexOf(id) === -1) {
 			// update the score
 			let score = this.state.score;
 			score++;
-			// add one to the score and update the clicked array to track which images have been clicked
+			// Update Score by one
 			this.setState({ score });
+			// update the clicked array to track which images are clicked
 			this.setState({ clickedArray });
 		} else {
-			//reset the clicked array and return the score to 0
+			//reset the clicked array and set score to 0
 			const clickedArray = [];
 			this.setState({ clickedArray });
 			this.setState({ score: 0 });
 		}
-		// return image shuffle
-		return this.shuffleImages(this.state.images);
+		// return image randomizer
+		return this.randomizeImages(this.state.images);
 	};
 
+	// function to compare current high score to current score
 	componentDidUpdate() {
-		// compare current high score to current score
 		// if my high score is less than my current score
-		//  update my high score to my current score
 		if (this.state.highScore < this.state.score) {
+			//  update my high score to the value of  my current score
 			this.setState({ highScore: this.state.score });
 		}
 	}
 
+	// function to render images
 	renderImages = () => {
-		// ren
+		// map out the images in my image array
 		return this.state.images.map((image) => {
+			// render my imageCard Component
+			// tak on an onclick even key, src and alt
 			return <ImageCard id={image.id} onClick={this.cardOnClick} src={image.image} alt={image.text} />;
 		});
 	};
 
-	shuffleImages = (array) => {
-		// logic from my word guess game
+	randomizeImages = (array) => {
+		//randomize images array
 		for (let i = array.length - 1; i > 0; i--) {
-			// randomize it
 			let j = Math.floor(Math.random() * (i + 1));
-			let temp = array[i];
+			let holdArray = array[i];
 			array[i] = array[j];
-			array[j] = temp;
+			array[j] = holdArray;
 		}
 		// return the new images array
 		return this.setState({ images: array });
 	};
-
+	// render initial load
 	render() {
 		return (
-			<div className="scoreBar row text-center">
+			<div className="row text-center">
 				<ScoreBar score={this.state.score} highScore={this.state.highScore} />
-				<div className="cardContainer">{this.renderImages()}</div>
+				<div>{this.renderImages()}</div>
 			</div>
 		);
 	}
